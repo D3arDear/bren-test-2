@@ -1,6 +1,13 @@
+const path = require("path");
 module.exports = {
+  mode: "production",
   entry: {
-    index: "./lib/index.tsx"
+    bui: "./lib/index.tsx"
+  },
+  output: {
+    path: path.resolve(__dirname, "dist/lib"),
+    library: "BUI",
+    libraryTarget: "umd"
   },
   module: {
     rules: [
